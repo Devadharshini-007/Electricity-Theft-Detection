@@ -1,37 +1,24 @@
 # ⚡ Electricity Theft Detection System
 
-A Machine Learning-based web application that detects electricity theft using consumer electricity consumption patterns. The system provides district-wise, town-wise, and area-wise fraud detection with an interactive Streamlit dashboard.
+A Machine Learning-based web application that detects electricity theft using electricity consumption patterns. The system helps electricity board officers identify suspicious consumers through district-wise, town-wise, and area-wise analysis using a Random Forest Classifier and an interactive Streamlit dashboard.
 
 ---
 
 ## 📌 Overview
 
-This project uses a Random Forest Machine Learning model to identify suspicious electricity consumption and predict possible electricity theft.
+The Electricity Theft Detection System analyzes consumer electricity usage and predicts whether a consumer is normal or involved in electricity theft.
 
-The application allows electricity board officers to:
+### Features
 
-- Secure login
-- View model performance
-- Detect fraud district-wise
-- Detect fraud town-wise
-- Detect fraud area-wise
-- View fraud consumer details
-- Download fraud consumer list
-- Predict whether a consumer is normal or involved in electricity theft
-
----
-
-## 🚀 Features
-
-- 🔐 Login Authentication
+- 🔐 Secure Login Authentication
 - 📊 Model Performance Analysis
-- 🏙 District-wise Fraud Detection
-- 🌍 Town-wise Fraud Detection
-- 📍 Area-wise Fraud Detection
-- 🚨 Fraud Consumer List
+- 🏙 District-wise Detection
+- 🌍 Town-wise Detection
+- 📍 Area-wise Detection
+- 🚨 Fraud Consumer Identification
 - 👤 Consumer Detail Analysis
 - 🤖 Machine Learning Prediction
-- 📥 Download Fraud Report (CSV)
+- 📥 Download Fraud Consumer Report
 
 ---
 
@@ -73,13 +60,11 @@ Electricity-Theft-Detection/
 
 ---
 
-## 📊 Machine Learning Model
+## 🤖 Machine Learning Model
 
-Algorithm Used:
+**Algorithm:** Random Forest Classifier
 
-**Random Forest Classifier**
-
-Features:
+### Input Features
 
 - Monthly Consumption
 - Average 6 Months Consumption
@@ -90,9 +75,10 @@ Features:
 - Area Mismatch
 - Feeder Mismatch
 
-Target:
+### Target
 
-- NTL_Label (Normal / Theft)
+- **0 → Normal Consumer**
+- **1 → Electricity Theft**
 
 ---
 
@@ -102,19 +88,13 @@ Target:
 
 ![Login Page](images/login_page.jpeg)
 
----
-
 ### 📊 Model Performance
 
-![Model Analysis](images/model_analysis.jpeg)
-
----
+![Model Performance](images/model_analysis.jpeg)
 
 ### 🔎 District Detection
 
 ![District Detection](images/district_detection.jpeg)
-
----
 
 ### 🚨 Fraud Detection
 
@@ -124,31 +104,31 @@ Target:
 
 ## ▶️ Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/Devadharshini-007/Electricity-Theft-Detection.git
 ```
 
-Go to the project folder
+### Go to the project folder
 
 ```bash
 cd Electricity-Theft-Detection
 ```
 
-Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the model
+### Train the model
 
 ```bash
 python train_model.py
 ```
 
-Run the Streamlit application
+### Run the application
 
 ```bash
 streamlit run app.py
@@ -160,38 +140,22 @@ streamlit run app.py
 
 ### Admin
 
-Username
-
-```
-admin
-```
-
-Password
-
-```
-1234
-```
+| Username | Password |
+|------------|------------|
+| admin | 1234 |
 
 ### Officer
 
-Username
-
-```
-officer
-```
-
-Password
-
-```
-1234
-```
+| Username | Password |
+|------------|------------|
+| officer | 1234 |
 
 ---
 
-## 📈 Model Performance
+## 📊 Model Performance
 
 | Metric | Score |
-|----------------|---------|
+|----------------|-------|
 | Accuracy | 1.00 |
 | Precision | 1.00 |
 | Recall | 1.00 |
@@ -199,12 +163,44 @@ Password
 
 ---
 
-## 🎯 Future Improvements
+## 🔄 Workflow
 
-- Real-time smart meter integration
-- Deep Learning models
+```
+Consumer Data
+      │
+      ▼
+Data Preprocessing
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Random Forest Classifier
+      │
+      ▼
+Fraud Prediction
+      │
+      ▼
+Streamlit Dashboard
+      │
+      ├── Login
+      ├── Model Analysis
+      ├── District Detection
+      ├── Town Detection
+      ├── Area Detection
+      ├── Fraud Consumer List
+      └── Consumer Prediction
+```
+
+---
+
+## 🚀 Future Improvements
+
+- Smart Meter Integration
+- Real-time Monitoring
 - GIS Map Visualization
-- Email and SMS Alerts
+- Email Notifications
+- SMS Alerts
 - Cloud Deployment
 - Mobile Application
 
@@ -217,15 +213,16 @@ Password
 B.Tech Artificial Intelligence and Data Science
 
 GitHub:
-
 https://github.com/Devadharshini-007
-
-LinkedIn:
-
-www.linkedin.com/in/deva-dharshini-12b7b1325
 
 ---
 
-## ⭐ If you like this project
+## ⭐ Support
 
-Give this repository a ⭐ Star on GitHub.
+If you found this project useful, please give it a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is developed for educational and academic purposes.
